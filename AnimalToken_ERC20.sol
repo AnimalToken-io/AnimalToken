@@ -3,7 +3,6 @@
 */
 
 // File: contracts\open-zeppelin-contracts\token\ERC20\IERC20.sol
-//pragma solidity ^0.5.0;
 pragma solidity 0.8.4;
 
 /**
@@ -83,7 +82,6 @@ interface IERC20 {
 
 // File: contracts\open-zeppelin-contracts\math\SafeMath.sol
 
-//pragma solidity ^0.5.0;
 pragma solidity 0.8.4;
 
 /**
@@ -194,7 +192,6 @@ library SafeMath {
 
 // File: contracts\open-zeppelin-contracts\token\ERC20\ERC20.sol
 
-//pragma solidity ^0.5.0;
 pragma solidity 0.8.4;
 
 
@@ -425,7 +422,6 @@ contract ERC20 is IERC20 {
 
 // File: contracts\ERC20\TokenMintERC20Token.sol
 
-//pragma solidity ^0.5.0;
 pragma solidity 0.8.4;
 
 
