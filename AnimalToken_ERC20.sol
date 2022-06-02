@@ -4,7 +4,7 @@
 
 // File: contracts\open-zeppelin-contracts\token\ERC20\IERC20.sol
 //pragma solidity ^0.5.0;
-pragma solidity ^=0.8.4;
+pragma solidity 0.8.4;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
