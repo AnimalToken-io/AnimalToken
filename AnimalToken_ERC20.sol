@@ -454,9 +454,8 @@ contract TokenMintERC20Token is ERC20 {
       _decimals = decimals;
 
       // set tokenOwnerAddress as owner of all tokens
-      // ADD Transfer(account, address(0), value);
       _mint(tokenOwnerAddress, totalSupply); 
-      //ADD require(address(_registry) != address(0));  
+      require(tokenOwnerAddress != address(0), "ERC20: approve from the zero address");  
 
       // pay the service fee for contract deployment
       feeReceiver.transfer(msg.value);
