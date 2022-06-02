@@ -454,12 +454,14 @@ contract TokenMintERC20Token is ERC20 {
       _decimals = decimals;
 
       // set tokenOwnerAddress as owner of all tokens
+      // ADD Transfer(account, address(0), value);
       _mint(tokenOwnerAddress, totalSupply); 
+      //ADD require(address(_registry) != address(0));  
 
       // pay the service fee for contract deployment
       feeReceiver.transfer(msg.value);
     }
-    
+     /** Or add:
     function balanceOf(msg.sender) = totalSupply {
       emit Transfer(address(0), msg.sender, totalSupply);
       }
@@ -467,7 +469,7 @@ contract TokenMintERC20Token is ERC20 {
     function totalSupply() public view returns (uint256) {
       return totalSupply - balanceOf[address(0)];
     }
-
+     */
     /**
      * @dev Burns a specific amount of tokens.
      * @param value The amount of lowest token units to be burned.
