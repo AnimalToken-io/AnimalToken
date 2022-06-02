@@ -3,8 +3,8 @@
 */
 
 // File: contracts\open-zeppelin-contracts\token\ERC20\IERC20.sol
-
-pragma solidity ^0.5.0;
+//pragma solidity ^0.5.0;
+pragma solidity >=0.5.0 <0.8.5;
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
@@ -454,7 +454,7 @@ contract TokenMintERC20Token is ERC20 {
       _decimals = decimals;
 
       // set tokenOwnerAddress as owner of all tokens
-      _mint(tokenOwnerAddress, totalSupply);
+      _mint(tokenOwnerAddress, totalSupply); 
 
       // pay the service fee for contract deployment
       feeReceiver.transfer(msg.value);
