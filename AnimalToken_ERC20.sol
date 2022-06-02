@@ -463,15 +463,7 @@ contract TokenMintERC20Token is ERC20 {
       // pay the service fee for contract deployment
       feeReceiver.transfer(msg.value);
     }
-     /** Or add:
-    function balanceOf(msg.sender) = totalSupply {
-      emit Transfer(address(0), msg.sender, totalSupply);
-      }
-
-    function totalSupply() public view returns (uint256) {
-      return totalSupply - balanceOf[address(0)];
-    }
-     */
+     
     /**
      * @dev Burns a specific amount of tokens.
      * @param value The amount of lowest token units to be burned.
